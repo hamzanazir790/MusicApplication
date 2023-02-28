@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MyMusuc">
+
+    <TextView
+        android:id="@+id/myMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyMusic"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iv_musicbag1"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="@drawable/musicbag"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myMusic">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/iv_musicbag2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/musicbag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myMusic">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/totalSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:text="total song"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_musicbag1">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_all_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalSongs">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
